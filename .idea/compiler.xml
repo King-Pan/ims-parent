@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ims-auto-generator" />
+        <module name="ims-common" />
+        <module name="ims-user-dao" />
+        <module name="ims-user-interface" />
+        <module name="ims-user-service" />
+        <module name="ims-user-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ims-auto-generator" target="1.8" />
+      <module name="ims-common" target="1.8" />
+      <module name="ims-parent" target="1.8" />
+      <module name="ims-user" target="1.8" />
+      <module name="ims-user-dao" target="1.8" />
+      <module name="ims-user-interface" target="1.8" />
+      <module name="ims-user-service" target="1.8" />
+      <module name="ims-user-web" target="1.8" />
+      <module name="ims-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ims-auto-generator" options="" />
+      <module name="ims-common" options="-parameters" />
+      <module name="ims-user-dao" options="-parameters" />
+      <module name="ims-user-interface" options="-parameters" />
+      <module name="ims-user-service" options="-parameters" />
+      <module name="ims-user-web" options="-parameters" />
+    </option>
+  </component>
+</project>

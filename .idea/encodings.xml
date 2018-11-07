@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-auto-generator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-user-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-user/ims-user-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-user/ims-user-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-user/ims-user-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-user/ims-user-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ims-user/ims-web" charset="UTF-8" />
+  </component>
+</project>
