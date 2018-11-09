@@ -1,8 +1,11 @@
 package club.javalearn.ims.user.web;
 
+import club.javalearn.ims.user.entity.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 /**
  * @author king-pan
@@ -18,6 +21,11 @@ public class UserController {
         ModelAndView view = new ModelAndView();
         view.setViewName("system/user");
         return view;
+    }
+
+
+    public List<User> pageList(){
+        return null;
     }
 
 
