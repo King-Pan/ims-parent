@@ -29,11 +29,11 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ims-auto-generator" options="" />
-      <module name="ims-common" options="-parameters" />
-      <module name="ims-user-dao" options="-parameters" />
-      <module name="ims-user-interface" options="-parameters" />
-      <module name="ims-user-service" options="-parameters" />
-      <module name="ims-user-web" options="-parameters" />
+      <module name="ims-common" options="" />
+      <module name="ims-user-dao" options="" />
+      <module name="ims-user-interface" options="" />
+      <module name="ims-user-service" options="" />
+      <module name="ims-user-web" options="" />
     </option>
   </component>
 </project>

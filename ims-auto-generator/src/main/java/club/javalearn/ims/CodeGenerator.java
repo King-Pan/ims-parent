@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * @author king-pan
+ */
 public class CodeGenerator {
     /**
      * <p>
@@ -94,7 +97,7 @@ public class CodeGenerator {
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
-       mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+        mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         mpg.execute();
     }
 }
