@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ims-auto-generator/ims-auto-generator.iml" filepath="$PROJECT_DIR$/ims-auto-generator/ims-auto-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/ims-common/ims-common.iml" filepath="$PROJECT_DIR$/ims-common/ims-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/ims-parent.iml" filepath="$PROJECT_DIR$/ims-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ims-user/ims-user.iml" filepath="$PROJECT_DIR$/ims-user/ims-user.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ims-user/ims-user-dao/ims-user-dao.iml" filepath="$PROJECT_DIR$/ims-user/ims-user-dao/ims-user-dao.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ims-user/ims-user-interface/ims-user-interface.iml" filepath="$PROJECT_DIR$/ims-user/ims-user-interface/ims-user-interface.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ims-user/ims-user-service/ims-user-service.iml" filepath="$PROJECT_DIR$/ims-user/ims-user-service/ims-user-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ims-user/ims-user-web/ims-user-web.iml" filepath="$PROJECT_DIR$/ims-user/ims-user-web/ims-user-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ims-system/ims-system.iml" filepath="$PROJECT_DIR$/ims-system/ims-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ims-system/ims-system-interface/ims-system-interface.iml" filepath="$PROJECT_DIR$/ims-system/ims-system-interface/ims-system-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ims-system/ims-system-repository/ims-system-repository.iml" filepath="$PROJECT_DIR$/ims-system/ims-system-repository/ims-system-repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ims-system/ims-system-service/ims-system-service.iml" filepath="$PROJECT_DIR$/ims-system/ims-system-service/ims-system-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ims-system/ims-system-web/ims-system-web.iml" filepath="$PROJECT_DIR$/ims-system/ims-system-web/ims-system-web.iml" />
     </modules>
   </component>
 </project>

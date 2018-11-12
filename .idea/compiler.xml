@@ -6,18 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ims-auto-generator" />
         <module name="ims-common" />
-        <module name="ims-user-dao" />
-        <module name="ims-user-interface" />
-        <module name="ims-user-service" />
-        <module name="ims-user-web" />
+        <module name="ims-system-interface" />
+        <module name="ims-system-repository" />
+        <module name="ims-system-service" />
+        <module name="ims-system-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ims-auto-generator" target="1.8" />
       <module name="ims-common" target="1.8" />
       <module name="ims-parent" target="1.8" />
+      <module name="ims-system" target="1.8" />
+      <module name="ims-system-interface" target="1.8" />
+      <module name="ims-system-repository" target="1.8" />
+      <module name="ims-system-service" target="1.8" />
+      <module name="ims-system-web" target="1.8" />
       <module name="ims-user" target="1.8" />
       <module name="ims-user-dao" target="1.8" />
       <module name="ims-user-interface" target="1.8" />
