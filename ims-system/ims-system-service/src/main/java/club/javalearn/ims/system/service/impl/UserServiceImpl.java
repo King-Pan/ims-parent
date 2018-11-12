@@ -4,12 +4,18 @@ import club.javalearn.ims.system.entity.QUser;
 import club.javalearn.ims.system.entity.User;
 import club.javalearn.ims.system.repository.UserRepository;
 import club.javalearn.ims.system.service.UserService;
+import com.querydsl.core.QueryResults;
+import com.querydsl.core.types.Predicate;
+import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,9 +46,25 @@ public class UserServiceImpl implements UserService {
     public List<User> pageList(User user, Pageable pageable) {
 
         QUser qUser = QUser.user;
-        JPAQuery<User> jpaQuery = jpaQueryFactory.select(qUser);
-        //jpaQuery.select()
+        List<Predicate> wherePredicate = new ArrayList<>();
+        if(user!=null){
+            if(StringUtils.isNoneBlank(user.getNickName())){
+                wherePredicate.add(qUser.nickName.like("%1哈哈%"));
+            }
+            if(StringUtils.isNoneBlank(user.getEmail())){
+                wherePredicate.add(qUser.email.like("%44%"));
+            }
+        }
+        Predicate[] predicates = new Predicate[]{};
+        JPAQuery<User> jpaQuery = jpaQueryFactory.select(qUser).from(qUser);
+        if(CollectionUtils.isNotEmpty(wherePredicate)){
+            jpaQuery.where(wherePredicate.toArray(predicates));
+        }
+        QueryResults results = jpaQuery.fetchResults();
+        System.out.println(results.getTotal());
+        System.out.println(results.isEmpty());
 
+        System.out.println();
         return null;
     }
 }

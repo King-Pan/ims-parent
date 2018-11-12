@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
@@ -39,5 +41,15 @@ public class UserServiceImplTest {
         user.setUserName("king-pan");
         user.setSalt("1111");
         userService.addUser(user);
+    }
+
+    @Test
+    public void testList(){
+
+        User user = new User();
+        user.setNickName("111");
+        user.setEmail("222");
+        Pageable pageable = new PageRequest(1,10);
+        userService.pageList(user,pageable);
     }
 }
