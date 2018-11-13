@@ -1,17 +1,19 @@
 package club.javalearn.ims.system.service.impl;
 
+import club.javalearn.ims.common.Message;
 import club.javalearn.ims.system.entity.QUser;
 import club.javalearn.ims.system.entity.User;
 import club.javalearn.ims.system.repository.UserRepository;
 import club.javalearn.ims.system.service.UserService;
+import club.javalearn.ims.system.service.util.PageUtil;
 import com.querydsl.core.QueryResults;
 import com.querydsl.core.types.Predicate;
-import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -43,7 +45,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> pageList(User user, Pageable pageable) {
+    public Message<User> pageList(User user, Pageable pageable) {
 
         QUser qUser = QUser.user;
         List<Predicate> wherePredicate = new ArrayList<>();
@@ -63,8 +65,6 @@ public class UserServiceImpl implements UserService {
         QueryResults results = jpaQuery.fetchResults();
         System.out.println(results.getTotal());
         System.out.println(results.isEmpty());
-
-        System.out.println();
         return null;
     }
 }

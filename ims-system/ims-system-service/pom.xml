@@ -18,11 +18,6 @@
             <artifactId>ims-system-repository</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>club.javalearn.ims</groupId>
-            <artifactId>ims-common</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
 

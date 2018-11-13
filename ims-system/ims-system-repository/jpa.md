@@ -62,3 +62,27 @@ https://www.jianshu.com/p/2b68af9aa0f5
         return new JPAQueryFactory(entityManager);
     }
 ```
+
+
+```java
+Criteria<User> criteria = new Criteria<>();  
+    criteria.add(Restrictions.eq("name", "test")); //等于 name = ‘test’  
+    criteria.add(Restrictions.like("name", "test", Criterion.MatchMode.ANYWHERE)); //等于 name like %test%  
+    criteria.add(Restrictions.between("age", 1 , 20));  //age between(1, 20)  
+    criteria.add(Restrictions.isNotEmpty("name")); // ISNOTEMPTY(name)  
+    List<String> list = new ArrayList();  
+    list.add("Alice");  
+    list.add("Mick");  
+    criteria.add(Restrictions.in("name", list));  // name in ('Alice','Mick')  
+  
+    criteria.add(Restrictions.eq(Projections.Length("name"), 5));  // length(name) = 5  
+    criteria.add(Restrictions.gt(Projections.Max("name"), 5));  // max(name) = 5  
+    criteria.add(Restrictions.or(Restrictions.eq("name", "tt"),Restrictions.eq("name", "qq"))); //(name = 'tt' or name = 'qq')  
+    List<User> userList = userRepository.findAll(criteria);  
+
+--------------------- 
+作者：stupid_qb 
+来源：CSDN 
+原文：https://blog.csdn.net/stupid_qb/article/details/79911164 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+```

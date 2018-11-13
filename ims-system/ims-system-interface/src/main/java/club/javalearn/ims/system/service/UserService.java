@@ -1,9 +1,8 @@
 package club.javalearn.ims.system.service;
 
+import club.javalearn.ims.common.Message;
 import club.javalearn.ims.system.entity.User;
 import org.springframework.data.domain.Pageable;
-
-import java.util.List;
 
 /**
  * @author king-pan
@@ -32,5 +31,5 @@ public interface UserService {
      * @param pageable
      * @return
      */
-    List<User> pageList(User user, Pageable pageable);
+    Message<User> pageList(User user, Pageable pageable);
 }
