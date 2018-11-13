@@ -2,6 +2,7 @@ package club.javalearn.ims.system.service.impl;
 
 import club.javalearn.ServiceApplication;
 import club.javalearn.ims.system.entity.User;
+import club.javalearn.ims.system.repository.UserRepository;
 import club.javalearn.ims.system.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -51,5 +52,17 @@ public class UserServiceImplTest {
         user.setEmail("222");
         Pageable pageable = new PageRequest(1,10);
         userService.pageList(user,pageable);
+    }
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Test
+    public void  testKz(){
+        User user = userRepository.findByUserName("king-pan");
+        user.setUserId(4L);
+        user.setUserName("woshizhongguoren");
+        user.setPassword("1111111zseffds");
+        userRepository.dynamicUpdate(user);
     }
 }
