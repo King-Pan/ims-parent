@@ -1,6 +1,7 @@
 package club.javalearn.ims.system.repository;
 
 import club.javalearn.ims.common.utils.BeanCopyUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.support.JpaEntityInformation;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
@@ -16,6 +17,7 @@ import java.io.Serializable;
  * @date 2018/11/13
  * @Description ${DESCRIPTION}
  */
+@Slf4j
 @Transactional(readOnly = false,rollbackFor =RuntimeException.class,propagation = Propagation.REQUIRED)
 public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRepository<T,ID> implements BaseRepository<T,ID>   {
 
@@ -47,10 +49,11 @@ public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRep
         //通过反射获取主键的值
         Object val = JpaReflectUtils.getPkValue(t);
         if(val!=null){
-            T dbT = getOne((ID) val);
-            if(dbT!=null){
-                BeanCopyUtil.beanCopy(dbT,t);
-            }
+
+                T dbT = (T) entityManager.find(t.getClass(),(Serializable)val);
+                if(dbT!=null){
+                    BeanCopyUtil.beanCopy(dbT,t);
+                }
         }
         return entityManager.merge(t);
     }

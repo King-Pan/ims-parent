@@ -63,6 +63,8 @@ public class UserServiceImplTest {
         user.setUserId(4L);
         user.setUserName("woshizhongguoren");
         user.setPassword("1111111zseffds");
+        user.setCreateTime(new Date());
+        user.setUpdateTime(new Date());
         userRepository.dynamicUpdate(user);
     }
 }
